@@ -1,14 +1,21 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      City App
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ion-item>
+    <ion-label>City</ion-label>
+    <ion-select [(ngModel)]="cityId">
+      <ion-option *ngFor="let city of citiesList" value="{{city.id}}">{{city.name}}</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <h1>{{citiesData[cityId].name}}</h1>
+  <img src="{{citiesData[cityId].image}}" />
+  <p>{{citiesData[cityId].text}}</p>
+
 </ion-content>

@@ -1,5 +1,7 @@
 {
   "name": "cityapp",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular"
 }
